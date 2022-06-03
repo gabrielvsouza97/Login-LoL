@@ -1,15 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', 'Sans-serif';
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+:root{
+    --white: #fff;
+    --whitesmoke: #F9F9F9;
+    --light-gray: #ECECEC;
+    --gray: #c4c4c4;
+    --medium-gray: #A7A7A7;
+    --deep-gray: #343434;
+    --black: #000000;
+    --blue: #1B77F3;
+    --red: #CF3C3F;
 }
 
 
 section.login-form{
     max-width: 500px;
-    width: 30%;
-    margin: 0 0;
-    background-color: red;
+    width: 100%;
+    height: 100vh;
+    padding: clamp(35px, 8%, 70px);
     display: flex;
     flex-direction: column;
+    align-items: center;
+   
     
+}
+section.login-form #logo-image{
+    width:130px;
+    margin-bottom: 70px;
+}
+
+section.login-form h1.txt-login{
+    color: var(--deep-gray);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+section.login-form label.campo-login{
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    position:relative;
+}
+
+section.login-form .campo-login input.input-dados{
+    width: 100%;
+    background-color: var(--light-gray);
+    border: 3px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    padding: 25px 10px 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--deep-gray);
+    outline: none;
+}
+
+section.login-form .campo-login span{
+    position: absolute;
+    font-weight: 700;
+    font-size: 0.8em;
+    color: var(--medium-gray);
+    margin:20px;
+    cursor:text;
+    text-transform: uppercase;
+    transition: ease 0.3s;
+}
+
+section.login-form .campo-login span.active{
+    margin:8px 10px ;
+    font-size: 0.7em;
+}
+section.login-form .campo-login input.input-dados:focus{
+    background-color: var(--whitesmoke);
+    border: 3px solid var(--deep-gray);
+}
+
+.login-method {
+    display: flex;  
+    width: 100%;  
+    gap:10px; 
+}
+.login-method button {
+    width: 33.33%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:none;
+    border:none;
+    
+}
+
+
+
+.login-method button:nth-child(1){
+    background-color: var(--black);
+    color: var(--whitesmoke);
+    font-size: 1em;
+}
+.login-method button:nth-child(2){
+    background-color: var(--blue);
+    color: var(--whitesmoke);
+    font-size: 1em;
+}
+.login-method button:nth-child(3){
+    background-color: var(--light-gray);
+    font-size: 1.5em;
+}
+
+section.login-form label.lembrar{
+   width: 100%;
+   margin: 15px 0 50px;
+   font-size: 0.9em;
+   font-weight: 500;
+   display:flex;
+   align-items: center;
+   color: var(--deep-gray);
+}
+section.login-form label.lembrar input#lembrar{
+    appearance: none;
+    width:20px;
+    height:20px;
+    background-color: var(--light-gray);
+    margin-right: 8px;
+    border-radius: 3px;    
+} 
+
+section.login-form label.lembrar input#lembrar:checked{
+    background-color: var(--blue);
+
+}
+section.login-form label.lembrar input#lembrar:checked::after{
+    content: '✓';
+    display: block;
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }

@@ -5,38 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="" href="scripts.js" defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="scripts.js" defer></script>
 
     <title>Login</title>
 </head>
 <body>
     <main>
         <section class="login-form">
-            <div class="logo">
-                <img src=".images/" alt="Logo-Riot" >
-            </div>
-            <h1 class="txt-login">Login</h1>
+          
+                <img src="./images/riotlogo.png" alt="Logo-Riot" id="logo-image" >
+    
+            <h1 class="txt-login">Fazer Login</h1>
 
-            <label for="campo-login">
+            <label class="campo-login">
                 <span>Nome de Usuário</span>
-                <input type="text" name="campo-login" id="login">
+                <input type="text" name="campo-login" class="input-dados">
             </label>
-            <label for="campo-senha">
+            <label class="campo-login">
                 <span>Senha</span>
-                <input type="password" name="campo-senha" id="senha">
+                <input type="password" name="campo-senha" class="input-dados">
             </label>
 
-            <label for="social-media">
+            <div class="login-method">
                 <button>
-                    <i class="fa fas-facebook"></i>
+                    <i class="fa-brands fa-apple"></i>
                 </button>
                 <button>
-                    <img src="./images" alt="logo-facebook" >
+                    <i class="fa-brands fa-facebook"></i>
                 </button>
                 <button>
-                    <img src="./images" alt="logo-google" >
+                    <i class="fa-brands fa-google"></i>
                 </button>
+            </div>
+            <label class="lembrar">
+                <input type="checkbox" name="lembrar" id="lembrar">
+                <span>Manter Logado</span>
             </label>
+            <button class="btn-login" id="btn-login" disabled><i class="fa-solid fa-arrow-right"></i></button>
+
         </section>
         <section class="wallpapper"></section>
     </main>
